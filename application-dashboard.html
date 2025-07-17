@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Interactive Dashboard - Muhammad Waseem Sabir</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+        line-height: 1.6;
+        color: #1a1a1a;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+
+      .back-link:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .dashboard-container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        margin-bottom: 2rem;
+      }
+
+      .dashboard-title {
+        color: #2d3748;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .tableauPlaceholder {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .tableauPlaceholder:last-child {
+        margin-bottom: 0;
+      }
+
+      .tableauPlaceholder object {
+        border-radius: 12px;
+      }
+
+      .footer {
+        text-align: center;
+        color: white;
+        margin-top: 3rem;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .dashboard-container {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+      <div class="header">
+        <h1>Application Interactive Dashboard</h1>
+        <p>
+          Comprehensive analysis of candidate applications with degree level
+          insights and position analytics
+        </p>
+      </div>
+
+      <div class="dashboard-container">
+        <h2 class="dashboard-title">Candidates Applications Dashboard</h2>
+        <div
+          class="tableauPlaceholder"
+          id="viz1752763328667"
+          style="position: relative"
+        >
+          <noscript>
+            <a href="#">
+              <img
+                alt="Dashboard 1 "
+                src="https://public.tableau.com/static/images/Ca/CandidatesApplicationsDashboard-1/Dashboard1/1_rss.png"
+                style="border: none"
+              />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display: none">
+            <param
+              name="host_url"
+              value="https%3A%2F%2Fpublic.tableau.com%2F"
+            />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param
+              name="name"
+              value="CandidatesApplicationsDashboard-1%2FDashboard1"
+            />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param
+              name="static_image"
+              value="https://public.tableau.com/static/images/Ca/CandidatesApplicationsDashboard-1/Dashboard1/1.png"
+            />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+          </object>
+        </div>
+      </div>
+
+      <div class="dashboard-container">
+        <h2 class="dashboard-title">Degree Level and Position Analysis</h2>
+        <div
+          class="tableauPlaceholder"
+          id="viz1752763373278"
+          style="position: relative"
+        >
+          <noscript>
+            <a href="#">
+              <img
+                alt="Degree Level and Position "
+                src="https://public.tableau.com/static/images/De/DegreeLevelandPosition/Sheet1/1_rss.png"
+                style="border: none"
+              />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display: none">
+            <param
+              name="host_url"
+              value="https%3A%2F%2Fpublic.tableau.com%2F"
+            />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="DegreeLevelandPosition%2FSheet1" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param
+              name="static_image"
+              value="https://public.tableau.com/static/images/De/DegreeLevelandPosition/Sheet1/1.png"
+            />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+          </object>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; 2025 Muhammad Waseem Sabir. Crafted with passion for data and
+          design.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tableau Visualization Scripts -->
+    <script type="text/javascript">
+      // First visualization
+      var divElement = document.getElementById("viz1752763328667");
+      var vizElement = divElement.getElementsByTagName("object")[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = "1200px";
+        vizElement.style.height = "827px";
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = "1200px";
+        vizElement.style.height = "827px";
+      } else {
+        vizElement.style.width = "100%";
+        vizElement.style.height = "1677px";
+      }
+      var scriptElement = document.createElement("script");
+      scriptElement.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+      // Second visualization
+      var divElement2 = document.getElementById("viz1752763373278");
+      var vizElement2 = divElement2.getElementsByTagName("object")[0];
+      vizElement2.style.width = "100%";
+      vizElement2.style.height = divElement2.offsetWidth * 0.75 + "px";
+      var scriptElement2 = document.createElement("script");
+      scriptElement2.src =
+        "https://public.tableau.com/javascripts/api/viz_v1.js";
+      vizElement2.parentNode.insertBefore(scriptElement2, vizElement2);
+    </script>
+  </body>
+</html>
