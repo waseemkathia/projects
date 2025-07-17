@@ -1,3 +1,278 @@
-<html>
-    <h1>Waseem Kathia Projects</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waseem Kathia Projects Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: white;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .project-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-card h2 {
+        color: #667eea;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .project-card p {
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+
+      .project-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .project-links a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      .project-links a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+
+      .charts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .chart-link {
+        padding: 0.5rem 1rem;
+        background: #f8f9fa;
+        color: #495057;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-align: center;
+        border: 1px solid #e9ecef;
+      }
+
+      .chart-link:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .footer {
+        text-align: center;
+        color: white;
+        margin-top: 3rem;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Waseem Kathia Projects</h1>
+        <p>
+          Welcome to my portfolio of web development and data visualization
+          projects
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>Sample Project</h2>
+          <p>
+            A basic web project demonstrating fundamental HTML structure and web
+            development concepts.
+          </p>
+          <div class="project-links">
+            <a href="sample-project/index.html" target="_blank"
+              >View Sample Project</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h2>USA Mass Shootings Data Visualization</h2>
+          <p>
+            A comprehensive data visualization project analyzing mass shooting
+            incidents in the United States. Features interactive charts and
+            detailed analysis.
+          </p>
+          <div class="project-links">
+            <a href="usa-mass-shootings/Index.html" target="_blank"
+              >Main Dashboard</a
+            >
+            <div class="charts-grid">
+              <a
+                href="usa-mass-shootings/assets/charts/index1.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 1</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index2.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 2</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index2-2.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 2-2</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index3.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 3</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index4.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 4</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index5.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 5</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index6.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 6</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index7.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 7</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index8.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 8</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index9.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 9</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index10.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 10</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index11.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 11</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index12.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 12</a
+              >
+              <a
+                href="usa-mass-shootings/assets/charts/index13.html"
+                target="_blank"
+                class="chart-link"
+                >Chart 13</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          &copy; 2024 Waseem Kathia. All projects are open source and available
+          for educational purposes.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
