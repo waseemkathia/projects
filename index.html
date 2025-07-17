@@ -12,265 +12,285 @@
       }
 
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
         line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #1a1a1a;
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 50%,
+          #f093fb 100%
+        );
         min-height: 100vh;
+        overflow-x: hidden;
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 3rem 2rem;
       }
 
       .header {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         color: white;
       }
 
       .header h1 {
-        font-size: 3rem;
+        font-size: 4rem;
+        font-weight: 800;
         margin-bottom: 1rem;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(45deg, #fff, #f0f0f0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       .header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
+        font-size: 1.3rem;
+        opacity: 0.95;
+        font-weight: 300;
+        max-width: 600px;
+        margin: 0 auto;
       }
 
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2.5rem;
         margin-bottom: 3rem;
       }
 
       .project-card {
-        background: white;
-        border-radius: 15px;
-        padding: 2rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        border-radius: 24px 24px 0 0;
       }
 
       .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        transform: translateY(-12px) scale(1.02);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
       }
 
       .project-card h2 {
-        color: #667eea;
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
+        color: #2d3748;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        position: relative;
+      }
+
+      .project-card h2::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        border-radius: 2px;
       }
 
       .project-card p {
-        color: #666;
-        margin-bottom: 1.5rem;
+        color: #4a5568;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
       }
 
       .project-links {
         display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
       }
 
       .project-links a {
-        display: inline-block;
-        padding: 0.75rem 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
         background: linear-gradient(135deg, #667eea, #764ba2);
         color: white;
         text-decoration: none;
-        border-radius: 25px;
+        border-radius: 50px;
         transition: all 0.3s ease;
-        text-align: center;
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 1rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+      }
+
+      .project-links a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .project-links a:hover::before {
+        left: 100%;
       }
 
       .project-links a:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
       }
 
-      .charts-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .chart-link {
-        padding: 0.5rem 1rem;
-        background: #f8f9fa;
-        color: #495057;
-        text-decoration: none;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        text-align: center;
-        border: 1px solid #e9ecef;
-      }
-
-      .chart-link:hover {
-        background: #667eea;
-        color: white;
-        transform: translateY(-2px);
+      .project-links a:active {
+        transform: translateY(-1px);
       }
 
       .footer {
         text-align: center;
         color: white;
-        margin-top: 3rem;
-        opacity: 0.8;
+        margin-top: 4rem;
+        opacity: 0.9;
+        font-weight: 300;
       }
 
+      .footer p {
+        font-size: 1.1rem;
+      }
+
+      /* Floating animation for cards */
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .project-card:nth-child(1) {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .project-card:nth-child(2) {
+        animation: float 6s ease-in-out infinite 2s;
+      }
+
+      /* Responsive design */
       @media (max-width: 768px) {
         .container {
-          padding: 1rem;
+          padding: 2rem 1rem;
         }
 
         .header h1 {
-          font-size: 2rem;
+          font-size: 2.5rem;
+        }
+
+        .header p {
+          font-size: 1.1rem;
         }
 
         .projects-grid {
           grid-template-columns: 1fr;
+          gap: 2rem;
         }
+
+        .project-card {
+          padding: 2rem;
+        }
+
+        .project-links {
+          flex-direction: column;
+        }
+
+        .project-links a {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .project-card {
+          padding: 1.5rem;
+        }
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #5a67d8, #6b46c1);
       }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h1>Waseem Kathia Projects</h1>
-        <p>
-          Welcome to my portfolio of web development and data visualization
-          projects
-        </p>
+        <h1>Waseem Kathia</h1>
+        <p>Full-Stack Developer & Data Visualization Specialist</p>
       </div>
 
       <div class="projects-grid">
         <div class="project-card">
-          <h2>Sample Project</h2>
+          <h2>USA Mass Shootings Analysis</h2>
           <p>
-            A basic web project demonstrating fundamental HTML structure and web
-            development concepts.
+            A comprehensive data visualization project that analyzes mass
+            shooting incidents across the United States. Features interactive
+            dashboards, detailed analytics, and compelling visualizations that
+            tell the story behind the data.
           </p>
           <div class="project-links">
-            <a href="sample-project/index.html" target="_blank"
-              >View Sample Project</a
-            >
-          </div>
-        </div>
-
-        <div class="project-card">
-          <h2>USA Mass Shootings Data Visualization</h2>
-          <p>
-            A comprehensive data visualization project analyzing mass shooting
-            incidents in the United States. Features interactive charts and
-            detailed analysis.
-          </p>
-          <div class="project-links">
-            <a href="usa-mass-shootings/Index.html" target="_blank"
-              >Main Dashboard</a
-            >
-            <div class="charts-grid">
-              <a
-                href="usa-mass-shootings/assets/charts/index1.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 1</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index2.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 2</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index2-2.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 2-2</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index3.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 3</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index4.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 4</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index5.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 5</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index6.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 6</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index7.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 7</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index8.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 8</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index9.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 9</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index10.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 10</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index11.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 11</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index12.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 12</a
-              >
-              <a
-                href="usa-mass-shootings/assets/charts/index13.html"
-                target="_blank"
-                class="chart-link"
-                >Chart 13</a
-              >
-            </div>
+            <a href="usa-mass-shootings/" target="_blank">View Dashboard</a>
           </div>
         </div>
       </div>
 
       <div class="footer">
         <p>
-          &copy; 2024 Waseem Kathia. All projects are open source and available
-          for educational purposes.
+          &copy; 2024 Waseem Kathia. Crafted with passion for data and design.
         </p>
       </div>
     </div>
