@@ -59,7 +59,7 @@
 
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
         margin-bottom: 3rem;
       }
@@ -197,7 +197,15 @@
       }
 
       .project-card:nth-child(2) {
-        animation: float 6s ease-in-out infinite 2s;
+        animation: float 6s ease-in-out infinite 1.5s;
+      }
+
+      .project-card:nth-child(3) {
+        animation: float 6s ease-in-out infinite 3s;
+      }
+
+      .project-card:nth-child(4) {
+        animation: float 6s ease-in-out infinite 4.5s;
       }
 
       /* Responsive design */
@@ -288,6 +296,16 @@
         </div>
 
         <div class="project-card">
+          <h2>Punjab Crime Analysis</h2>
+          <p>
+            A comprehensive analysis of crime data in Punjab, presented through an interactive dashboard.
+          </p>
+          <div class="project-links">
+            <a href="punjab-crime-analysis.html" target="_blank">View Dashboard</a>
+          </div>
+        </div>
+
+        <div class="project-card">
           <h2>Application Interactive Dashboard</h2>
           <p>
             An interactive Tableau dashboard showcasing candidate applications
@@ -301,6 +319,17 @@
             >
           </div>
         </div>
+
+        <div class="project-card">
+          <h2>E-commerce Sales Dashboard</h2>
+          <p>
+            A powerful dashboard providing real-time insights into e-commerce sales, customer behavior, and product performance.
+          </p>
+          <div class="project-links">
+            <a href="#" target="_blank">View Dashboard</a>
+          </div>
+        </div>
+
       </div>
 
       <div class="footer">
